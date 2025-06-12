@@ -56,7 +56,7 @@ if st.button("🔍 Predict Loan Approval"):
     input_data = input_data[feature_order]
     prediction = model.predict(input_data)[0]
     probability = model.predict_proba(input_data)[0][1]
-    prediction = 1 if probability >= 0.7 else 0  # adjust threshold as needed
+    prediction = 1 if probability >= 0.6 else 0  # adjust threshold as needed
     credit_score = int(probability * 100)
 
     st.subheader("📊 Prediction Result")
