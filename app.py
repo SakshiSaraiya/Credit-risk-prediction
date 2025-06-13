@@ -60,9 +60,12 @@ if st.button("🔍 Predict Loan Approval"):
     credit_score = int(probability * 100)
 
     st.subheader("📊 Prediction Result")
-    if prediction == 1:
+if prediction == 1:
     st.success("✅ Loan Approved")
-    else:
-    st.error("❌ Loan Rejected")
     st.metric("📈 Approval Probability", f"{probability:.2f}")
     st.metric("💳 Customer Credit Score", f"{credit_score}/100")
+else:
+    st.error("❌ Loan Rejected")
+    st.metric("📉 Approval Probability", f"{probability:.2f}")
+    st.metric("💳 Customer Credit Score", f"{credit_score}/100")
+
