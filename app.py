@@ -5,7 +5,7 @@ import joblib
 # Load the trained Random Forest model
 model = joblib.load('credit_risk_model.pkl')  # change if you're using logistic
 
-st.title("🏦 Credit Risk Prediction")
+st.title("🏦 Loan Approval System")
 st.write("Provide your details to check loan eligibility and credit score")
 
 # User inputs
